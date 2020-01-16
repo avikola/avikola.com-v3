@@ -1,0 +1,139 @@
+import React from "react"
+import styled, { createGlobalStyle } from "styled-components"
+
+//FIXME: make the page borders in a different way. to be more consistent.
+
+export const Block = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-direction: ${props => (props.direction ? "column" : "row")};
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const GlobalStyle = createGlobalStyle`
+ 	@font-face {
+	font-family: "Raleway";
+	src: local("Raleway Black"), local("Raleway-Black"),
+		url("../fonts/Raleway/Raleway-Black.woff2") format("woff2");
+	font-weight: 900;
+	font-style: normal;
+	}
+
+	@font-face {
+	font-family: "Raleway";
+	src: local("Raleway Bold"), local("Raleway-Bold"),
+		url("../fonts/Raleway/Raleway-Bold.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
+	}
+
+	@font-face {
+	font-family: "Raleway";
+	src: local("Raleway SemiBold"), local("Raleway-SemiBold"),
+		url("../fonts/Raleway/Raleway-SemiBold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+	}
+
+	@font-face {
+	font-family: "Raleway";
+	src: local("Raleway Medium"), local("Raleway-Medium"),
+		url("../fonts/Raleway/Raleway-Medium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+	}
+
+	/* Roboto */
+
+	@font-face {
+	font-family: "Roboto";
+	src: local("Roboto Thin"), local("Roboto-Thin"),
+		url("../fonts/Roboto/Roboto-Thin.woff2") format("woff2");
+	font-weight: 100;
+	font-style: normal;
+	}
+
+	@font-face {
+	font-family: "Roboto";
+	src: local("Roboto Black"), local("Roboto-Black"),
+		url("../fonts/Roboto/Roboto-Black.woff2") format("woff2");
+	font-weight: 900;
+	font-style: normal;
+	}
+
+	@font-face {
+	font-family: "Roboto";
+	src: local("Roboto Light"), local("Roboto-Light"),
+		url("../fonts/Roboto/Roboto-Light.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
+	}
+
+	@font-face {
+	font-family: "Roboto";
+	src: local("Roboto"), local("Roboto-Regular"),
+		url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	}
+
+	@font-face {
+	font-family: "Roboto";
+	src: local("Roboto Bold"), local("Roboto-Bold"),
+		url("../fonts/Roboto/Roboto-Bold.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
+	}
+
+	@font-face {
+	font-family: "Roboto";
+	src: local("Roboto Medium"), local("Roboto-Medium"),
+		url("../fonts/Roboto/Roboto-Medium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+	}
+
+	/* Consider Removal of the following */
+
+	@font-face {
+	font-family: "Raleway";
+	src: local("Raleway"), local("Raleway-Regular"),
+		url("../fonts/Raleway/Raleway-Regular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	}
+
+	@font-face {
+	font-family: "Raleway";
+	src: local("Raleway ExtraBold"), local("Raleway-ExtraBold"),
+		url("../fonts/Raleway/Raleway-ExtraBold.woff2") format("woff2");
+	font-weight: 800;
+	font-style: normal;
+	}
+
+	/* global */
+
+	* {
+	padding: 0;
+	margin: 0;
+	}
+
+	html,
+	body,
+	#___gatsby,
+	div[role="group"][tabindex] {
+	height: 100%;
+	}
+
+	div[role="group"][tabindex] {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #cccccc;
+	}
+
+`

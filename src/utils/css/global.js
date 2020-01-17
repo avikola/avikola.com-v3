@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle, keyframes } from "styled-components"
 
 //FIXME: make the page borders in a different way. to be more consistent.
 
@@ -13,8 +13,46 @@ export const Block = styled.div`
   justify-content: center;
   align-items: center;
 `
+const borderClose = keyframes`
+to{
+	border: 25px solid rgba(255, 255, 255, 0.93);
+}
+`
 
 export const GlobalStyle = createGlobalStyle`
+	/* global */
+	@import url('https://rsms.me/inter/inter.css');
+	* {
+		padding: 0;
+		margin: 0;
+	}
+
+	html,
+	body,
+	#___gatsby,
+	div[role="group"][tabindex] {
+		height: 100vh;
+	}
+	
+	div[role="group"][tabindex]::before {
+		content:"";
+		animation: ${borderClose} 0.25s 4.75s ease-out forwards 1;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		border: 0px solid #eee;
+	}
+
+	div[role="group"][tabindex] {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+
+	/* Fonts */
+	
  	@font-face {
 	font-family: "Raleway";
 	src: local("Raleway Black"), local("Raleway-Black"),
@@ -114,26 +152,4 @@ export const GlobalStyle = createGlobalStyle`
 	font-weight: 800;
 	font-style: normal;
 	}
-
-	/* global */
-
-	* {
-	padding: 0;
-	margin: 0;
-	}
-
-	html,
-	body,
-	#___gatsby,
-	div[role="group"][tabindex] {
-	height: 100%;
-	}
-
-	div[role="group"][tabindex] {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #cccccc;
-	}
-
 `

@@ -1,7 +1,6 @@
 import React from "react"
 
 import SEO from "../utils/seo"
-import { Name } from "../components/intro"
 import { Block } from "../utils/css/global"
 import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
@@ -32,7 +31,6 @@ const NotFoundPage = () => (
   <>
     <SEO title="404: Not found" />
     <Block direction="column">
-      <Name>404 NOT FOUND</Name>
       <br />
       <Link to="/">
         <LinkHome>GO BACK HOME</LinkHome>

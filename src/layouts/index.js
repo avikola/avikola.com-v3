@@ -4,9 +4,9 @@ import styled from "styled-components"
 import { GlobalStyle } from "../utils/css/global"
 
 const BodyContainer = styled.div`
-  background-color: #151515;
-  height: 90%;
-  width: 95%;
+  background-color: #141414;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
 `

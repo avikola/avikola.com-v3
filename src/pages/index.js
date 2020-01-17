@@ -5,7 +5,7 @@ import Intro from "../components/intro"
 const IndexPage = () => (
   <>
     <SEO title="Software Developer" />
-    <Intro />>
+    <Intro />
   </>
 )
 

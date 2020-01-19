@@ -1,4 +1,3 @@
-import React from "react"
 import styled, { createGlobalStyle, keyframes } from "styled-components"
 
 //FIXME: make the page borders in a different way. to be more consistent.
@@ -21,7 +20,8 @@ to{
 
 export const GlobalStyle = createGlobalStyle`
 	/* global */
-	@import url('https://rsms.me/inter/inter.css');
+	@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
 	* {
 		padding: 0;
 		margin: 0;
@@ -31,7 +31,7 @@ export const GlobalStyle = createGlobalStyle`
 	body,
 	#___gatsby,
 	div[role="group"][tabindex] {
-		height: 100vh;
+		height: 100%;
 	}
 	
 	div[role="group"][tabindex]::before {
@@ -46,9 +46,10 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	div[role="group"][tabindex] {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: rgba(255, 255, 255, 0.93);
 	}
 
 	/* Fonts */
@@ -133,6 +134,55 @@ export const GlobalStyle = createGlobalStyle`
 		url("../fonts/Roboto/Roboto-Medium.woff2") format("woff2");
 	font-weight: 500;
 	font-style: normal;
+	}
+
+	/* Inter */
+
+	@font-face {
+		font-family: 'Inter';
+		font-style:  normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url("../fonts/Inter/Inter-Regular.woff2?v=3.11") format("woff2");
+	}
+
+	@font-face {
+		font-family: 'Inter';
+		font-style:  normal;
+		font-weight: 500;
+		font-display: swap;
+		src: url("../fonts/Inter/Inter-Medium.woff2?v=3.11") format("woff2");
+	}
+
+	@font-face {
+		font-family: 'Inter';
+		font-style:  normal;
+		font-weight: 600;
+		font-display: swap;
+		src: url("../fonts/Inter/Inter-SemiBold.woff2?v=3.11") format("woff2");
+	}
+
+	@font-face {
+		font-family: 'Inter';
+		font-style:  normal;
+		font-weight: 700;
+		font-display: swap;
+		src: url("../fonts/Inter/Inter-Bold.woff2?v=3.11") format("woff2");
+	}
+	@font-face {
+		font-family: 'Inter';
+		font-style:  normal;
+		font-weight: 800;
+		font-display: swap;
+		src: url("../fonts/Inter/Inter-ExtraBold.woff2?v=3.11") format("woff2");
+	}
+
+	@font-face {
+		font-family: 'Inter';
+		font-style:  normal;
+		font-weight: 900;
+		font-display: swap;
+		src: url("../fonts/Inter/Inter-Black.woff2?v=3.11") format("woff2");
 	}
 
 	/* Consider Removal of the following */

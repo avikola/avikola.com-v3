@@ -141,6 +141,14 @@ export const GlobalStyle = createGlobalStyle`
 	@font-face {
 		font-family: 'Inter';
 		font-style:  normal;
+		font-weight: 300;
+		font-display: swap;
+		src: url("../fonts/Inter/Inter-Light-BETA.woff2?v=3.11") format("woff2");
+	}
+
+	@font-face {
+		font-family: 'Inter';
+		font-style:  normal;
 		font-weight: 400;
 		font-display: swap;
 		src: url("../fonts/Inter/Inter-Regular.woff2?v=3.11") format("woff2");

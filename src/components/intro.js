@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 
 import { Block } from "../utils/css/global"
-import { Dev, Name } from "../utils/css/intro_css "
+import { Dev, Name } from "../utils/css/intro_css"
 
 export default class intro extends Component {
   constructor(props) {
@@ -34,9 +34,8 @@ export default class intro extends Component {
           dev_content: this.state.dev_content + this.dev[this.dev_count],
         })
       }
-    }, 1000)
+    }, 900)
   }
-
   componentDidUpdate() {
     if (!this.dev_starter) {
       setTimeout(() => {
@@ -49,8 +48,13 @@ export default class intro extends Component {
   render() {
     return (
       <Block direction="column">
-        <Dev>{this.state.hello_content}</Dev>
-        <Name>AVISHKAR KOLAHALU</Name>
+        <Dev hello>{this.state.hello_content}</Dev>
+        <Block>
+          <Name>
+            <span>A</span>VISHKAR
+          </Name>
+          <Name surname>KOLAHALU</Name>
+        </Block>
         <Dev>{this.state.dev_content}</Dev>
       </Block>
     )

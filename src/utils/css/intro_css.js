@@ -1,85 +1,50 @@
-import styled, { keyframes, css } from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 const introduction = keyframes`
-  10%{
+  10%, 100%{
     opacity: 1;
   }
   15%, 90%{
-    opacity: 1;
-    font-size: 7.5em;
+    font-size: 8vw;
   }
   100%{
-    font-size: 6em;
-    opacity: 1;
+    font-size: 6.5vw;
   }
   `
-const introduction_tablet = keyframes`
-  10%{
-    opacity: 1;
-  }
-  15%{
-    opacity: 1;
-    font-size: 8.5vw;
-  }
-  90%{
-    opacity: 1;
-    font-size: 8.5vw;
-  }
-  100%{
-    font-size: 7vw;
-    opacity: 1;
-  }
-  `
-
-const introduction_mobile = keyframes`
-  10%{
-    opacity: 1;
-  }
-  15%{
-    opacity: 1;
-    font-size: 17vw;
-  }
-  90%{
-    opacity: 1;
-    font-size: 17vw;
-  }
-  100%{
-    font-size: 15vw;
-    opacity: 1;
-  }
-  `
-
 export const Name = styled.h1`
   color: rgba(255, 255, 255, 0.93);
   font-family: "Inter", sans-serif;
-  font-weight: 900;
-  font-size: 4em;
+  font-weight: ${props => (props.surname ? "300" : "800")};
+  font-size: 10em;
+  letter-spacing: ${props => (props.surname ? "-0.5vw" : "-0.2vw")};
   white-space: nowrap;
   opacity: 0;
-  animation: ${introduction} 2.5s 2.5s ease-out forwards 1;
+  animation: ${introduction} 2.5s 2.5s ease-out forwards;
   text-align: center;
-
-  @media (min-width: 769px) and (max-width: 1228px) {
-    font-size: 5vw;
-    white-space: normal;
-    animation-name: ${introduction_tablet};
-  }
-
-  @media (max-width: 768px) {
-    font-size: 11vw;
-    line-height: 1.5em;
-    white-space: normal;
-    padding: 15px 0;
-    animation-name: ${introduction_mobile};
+  span {
+    margin-right: -1.1vw;
+    @media (max-width: 768px) {
+      margin-right: -0.85vw;
+    }
   }
 `
 
 export const Dev = styled.h2`
   position: absolute;
-  margin-top: 100px;
+  margin-top: ${props => (props.hello ? "-80px" : "80px")};
   color: rgba(255, 255, 255, 0.93);
   font-family: "Roboto Mono", monospace;
   letter-spacing: 1px;
   font-weight: 500;
   text-align: center;
+
+  @media (min-width: 769px) and (max-width: 1228px) {
+    margin-top: ${props => (props.hello ? "-7vw" : "7vw")};
+    font-size: 3vw;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: ${props => (props.hello ? "-8vw" : "8vw")};
+    font-size: 3.8vw;
+  }
 `

@@ -1,6 +1,6 @@
-import React from "react"
-import SEO from "../utils/seo"
-import Intro from "../components/intro"
+import React from 'react'
+import SEO from '../utils/seo'
+import Intro from '../components/intro'
 
 const IndexPage = () => (
   <>

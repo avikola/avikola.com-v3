@@ -72,7 +72,7 @@ export default class intro extends Component {
 
   render() {
     return (
-      <Block direction="column">
+      <Block direction="column" className="noselect">
         <IntroAnimateStyle />
         <Dev hello>
           {this.state.hello_content}

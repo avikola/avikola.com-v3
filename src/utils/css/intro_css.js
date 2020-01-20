@@ -20,19 +20,19 @@ export const Name = styled.h1`
 
 export const Dev = styled.h2`
   position: absolute;
-  margin-top: ${props => (props.hello ? '-80px' : '80px')};
+  margin-top: ${props => (props.hello ? '-82px' : '80px')};
   font-family: 'Roboto Mono', monospace;
   letter-spacing: 1px;
   font-weight: 500;
   text-align: center;
 
   @media (max-width: 1228px) {
-    margin-top: ${props => (props.hello ? '-7vw' : '7vw')};
+    margin-top: ${props => (props.hello ? '-7.6vw' : '7vw')};
     font-size: 2.4vw;
   }
 
   @media (max-width: 768px) {
-    margin-top: ${props => (props.hello ? '-8vw' : '8vw')};
+    margin-top: ${props => (props.hello ? '-9vw' : '8vw')};
     font-size: 3.5vw;
   }
 `

@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
       theme={{
         white: 'rgba(255, 255, 255, 0.93)',
         black: '#141414',
-        accent: '#FF4300',
+        accent: '#E5261C',
       }}
     >
       <BodyContainer>

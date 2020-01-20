@@ -13,7 +13,6 @@ export const Block = styled.div`
 
 export const GlobalStyle = createGlobalStyle`
 	/* global */
-	@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 	* {
 		padding: 0;
@@ -69,22 +68,13 @@ export const GlobalStyle = createGlobalStyle`
 		align-items: center;
 		color: ${props => props.theme.white};
 	}
-
-	::-moz-selection {
-		color: ${props => props.theme.black};
-		background: ${props => props.theme.accent};
-	}
-
+	
 	::selection {
 		color: ${props => props.theme.black};
 		background: ${props => props.theme.accent};
 	}
 
 	.noselect {
-		-webkit-touch-callout: none; /* iOS Safari */
-		-webkit-user-select: none; /* Safari */
-		-moz-user-select: none; /* Old Firefox */
-		-ms-user-select: none; /* IE / Edge */
-		user-select: none; /* Chrome, Opera and Firefox */
+		user-select: none;
 	}
 `

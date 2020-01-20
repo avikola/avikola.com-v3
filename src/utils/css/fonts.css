@@ -1,7 +1,7 @@
 /* Fonts */
 
 /* Roboto */
-
+/*
 @font-face {
   font-family: 'Roboto';
   src: local('Roboto Thin'), local('Roboto-Thin'),
@@ -49,7 +49,7 @@
   font-weight: 500;
   font-style: normal;
 }
-
+*/
 /* Inter */
 
 @font-face {
@@ -105,4 +105,14 @@
   font-weight: 900;
   font-display: swap;
   src: url('../fonts/Inter/Inter-Black.woff2?v=3.11') format('woff2');
+}
+
+/* Roboto Mono */
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Mono Medium'), local('RobotoMono-Medium'),
+    url('../fonts/Roboto-Mono/roboto-mono-v7-latin-500.woff2') format('woff2'); /* Super Modern Browsers */
 }

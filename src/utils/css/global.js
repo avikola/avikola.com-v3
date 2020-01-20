@@ -1,21 +1,14 @@
-import styled, { createGlobalStyle, keyframes } from "styled-components"
-
-//FIXME: make the page borders in a different way. to be more consistent.
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const Block = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  flex-direction: ${props => (props.direction ? "column" : "row")};
+  flex-direction: ${props => (props.direction ? 'column' : 'row')};
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-`
-const borderClose = keyframes`
-to{
-	border: 25px solid rgba(255, 255, 255, 0.93);
-}
 `
 
 export const GlobalStyle = createGlobalStyle`
@@ -34,58 +27,51 @@ export const GlobalStyle = createGlobalStyle`
 		height: 100%;
 	}
 	
+	@keyframes borderClose {
+		to {
+			border: 25px solid ${props => props.theme.white};
+		}
+	}
+
+	@media (max-width: 1228px)
+	{
+		@keyframes borderClose {
+			to {
+				border: 17px solid ${props => props.theme.white};
+			}
+		}
+	}
+
+	@media (max-width: 768px)
+	{
+		@keyframes borderClose {
+			to {
+				border: 10px solid ${props => props.theme.white};
+			}
+		}
+	}
+
 	div[role="group"][tabindex]::before {
-		content:"";
-		animation: ${borderClose} 0.25s 4.75s ease-out forwards 1;
 		position: absolute;
+		content:"";
 		top: 0px;
 		left: 0px;
 		right: 0px;
 		bottom: 0px;
-		border: 0px solid #eee;
+		border: 0px;
+
+		animation: borderClose 0.25s 4.75s ease-out forwards 1;
 	}
 
 	div[role="group"][tabindex] {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color: rgba(255, 255, 255, 0.93);
+		color: ${props => props.theme.white};
 	}
 
 	/* Fonts */
 	
- 	@font-face {
-	font-family: "Raleway";
-	src: local("Raleway Black"), local("Raleway-Black"),
-		url("../fonts/Raleway/Raleway-Black.woff2") format("woff2");
-	font-weight: 900;
-	font-style: normal;
-	}
-
-	@font-face {
-	font-family: "Raleway";
-	src: local("Raleway Bold"), local("Raleway-Bold"),
-		url("../fonts/Raleway/Raleway-Bold.woff2") format("woff2");
-	font-weight: bold;
-	font-style: normal;
-	}
-
-	@font-face {
-	font-family: "Raleway";
-	src: local("Raleway SemiBold"), local("Raleway-SemiBold"),
-		url("../fonts/Raleway/Raleway-SemiBold.woff2") format("woff2");
-	font-weight: 600;
-	font-style: normal;
-	}
-
-	@font-face {
-	font-family: "Raleway";
-	src: local("Raleway Medium"), local("Raleway-Medium"),
-		url("../fonts/Raleway/Raleway-Medium.woff2") format("woff2");
-	font-weight: 500;
-	font-style: normal;
-	}
-
 	/* Roboto */
 
 	@font-face {
@@ -193,21 +179,4 @@ export const GlobalStyle = createGlobalStyle`
 		src: url("../fonts/Inter/Inter-Black.woff2?v=3.11") format("woff2");
 	}
 
-	/* Consider Removal of the following */
-
-	@font-face {
-	font-family: "Raleway";
-	src: local("Raleway"), local("Raleway-Regular"),
-		url("../fonts/Raleway/Raleway-Regular.woff2") format("woff2");
-	font-weight: normal;
-	font-style: normal;
-	}
-
-	@font-face {
-	font-family: "Raleway";
-	src: local("Raleway ExtraBold"), local("Raleway-ExtraBold"),
-		url("../fonts/Raleway/Raleway-ExtraBold.woff2") format("woff2");
-	font-weight: 800;
-	font-style: normal;
-	}
 `

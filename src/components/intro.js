@@ -1,13 +1,41 @@
-import React, { Component } from "react"
+import React, { Component } from 'react'
 
-import { Block } from "../utils/css/global"
-import { Dev, Name } from "../utils/css/intro_css"
+import { Block } from '../utils/css/global'
+import { Dev, Name } from '../utils/css/intro_css'
+import { createGlobalStyle } from 'styled-components'
+
+const IntroAnimateStyle = createGlobalStyle`
+@keyframes introduction {
+		10%, 100% {
+			opacity: 1;
+		}
+		15%, 90% {
+			font-size: 8vw;
+		}
+		to {
+			font-size: 6.5vw;
+		}
+	}
+
+	@media (max-width: 768px) {
+		@keyframes introduction {
+			10%, 100% {
+				opacity: 1;
+			}
+			15%, 90% {
+				font-size: 9vw;
+			}
+			to {
+				font-size: 7.5vw;
+			}
+		}
+	} `
 
 export default class intro extends Component {
   constructor(props) {
     super(props)
-    this.state = { dev_content: "", hello_content: "" }
-    this.dev = "// Software Developer"
+    this.state = { dev_content: '', hello_content: '' }
+    this.dev = '// Software Developer'
     this.hello = "Hello there, I'm"
     this.dev_count = -1
     this.hello_count = -1
@@ -26,28 +54,26 @@ export default class intro extends Component {
     }, 100)
   }
 
-  DevDisplay() {
-    setTimeout(() => {
-      if (this.dev_count < this.dev.length - 1) {
-        this.dev_count += 1
-        this.setState({
-          dev_content: this.state.dev_content + this.dev[this.dev_count],
-        })
-      }
-    }, 900)
-  }
   componentDidUpdate() {
     if (!this.dev_starter) {
+      this.dev_starter = true
       setTimeout(() => {
-        this.dev_starter = true
-        this.DevDisplay()
-      }, 4750)
-    } else this.DevDisplay()
+        setInterval(() => {
+          if (this.dev_count < this.dev.length - 1) {
+            this.dev_count += 1
+            this.setState({
+              dev_content: this.state.dev_content + this.dev[this.dev_count],
+            })
+          }
+        }, 100)
+      }, 4400)
+    }
   }
 
   render() {
     return (
       <Block direction="column">
+        <IntroAnimateStyle />
         <Dev hello>{this.state.hello_content}</Dev>
         <Block>
           <Name>

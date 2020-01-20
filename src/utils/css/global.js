@@ -60,7 +60,7 @@ export const GlobalStyle = createGlobalStyle`
 		bottom: 0px;
 		border: 0px;
 
-		animation: borderClose 0.25s 4.75s ease-out forwards 1;
+		animation: borderClose 0.25s 4.55s ease-out forwards 1;
 	}
 
 	div[role="group"][tabindex] {

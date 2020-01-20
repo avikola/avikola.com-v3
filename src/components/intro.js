@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { Block } from '../utils/css/global'
-import { Dev, Name } from '../utils/css/intro_css'
+import { Dev, Name, Caret } from '../utils/css/intro_css'
 import { createGlobalStyle } from 'styled-components'
 
 const IntroAnimateStyle = createGlobalStyle`
@@ -65,8 +65,8 @@ export default class intro extends Component {
               dev_content: this.state.dev_content + this.dev[this.dev_count],
             })
           }
-        }, 100)
-      }, 4400)
+        }, 80)
+      }, 4950)
     }
   }
 
@@ -74,14 +74,20 @@ export default class intro extends Component {
     return (
       <Block direction="column">
         <IntroAnimateStyle />
-        <Dev hello>{this.state.hello_content}</Dev>
+        <Dev hello>
+          {this.state.hello_content}
+          <Caret className="hello_caret" />
+        </Dev>
         <Block>
           <Name>
             <span>A</span>VISHKAR
           </Name>
           <Name surname>KOLAHALU</Name>
         </Block>
-        <Dev>{this.state.dev_content}</Dev>
+        <Dev>
+          {this.state.dev_content}
+          <Caret className="dev_caret" />
+        </Dev>
       </Block>
     )
   }

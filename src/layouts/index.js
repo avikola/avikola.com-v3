@@ -14,7 +14,11 @@ const BodyContainer = styled.div`
 const Layout = ({ children }) => {
   return (
     <ThemeProvider
-      theme={{ white: 'rgba(255, 255, 255, 0.93)', black: '#141414' }}
+      theme={{
+        white: 'rgba(255, 255, 255, 0.93)',
+        black: '#141414',
+        accent: '#FF4300',
+      }}
     >
       <BodyContainer>
         <GlobalStyle />

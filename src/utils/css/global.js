@@ -9,14 +9,43 @@ export const Block = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${props =>
+    props.fullname &&
+    '@media (max-width: 1228px){height:30% !important; margin-top: 0.9vw; }'}
+  ${props =>
+    props.fullname &&
+    '@media (max-width: 768px){height:20% !important; margin-top: 1.6vw; }'}
+  ${props => props.fullname && 'height: 40%; margin-top: 0.5vw;'}
 `
 
 export const GlobalStyle = createGlobalStyle`
 	/* global */
 
 	* {
-		padding: 0;
 		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+
+	footer, header, menu, nav, section {
+		display: block;
+	}
+
+	body {
+		line-height: 1;
+	}
+
+	ol, ul {
+		list-style: none;
+	}
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
 	}
 
 	html,
@@ -68,7 +97,7 @@ export const GlobalStyle = createGlobalStyle`
 		align-items: center;
 		color: ${props => props.theme.white};
 	}
-	
+
 	::selection {
 		color: ${props => props.theme.black};
 		background: ${props => props.theme.accent};
@@ -77,4 +106,6 @@ export const GlobalStyle = createGlobalStyle`
 	.noselect {
 		user-select: none;
 	}
+
+	
 `

@@ -26,14 +26,14 @@ export const Dev = styled.h2`
   font-weight: 500;
   text-align: center;
 
-  @media (min-width: 769px) and (max-width: 1228px) {
+  @media (max-width: 1228px) {
     margin-top: ${props => (props.hello ? '-7vw' : '7vw')};
     font-size: 2.4vw;
   }
 
   @media (max-width: 768px) {
     margin-top: ${props => (props.hello ? '-8vw' : '8vw')};
-    font-size: 3.8vw;
+    font-size: 3.5vw;
   }
 `
 
@@ -45,7 +45,7 @@ from, to{
 
 const hello_gone = keyframes`
 from, to{
-  opacity: 0
+  opacity: 0;
 }`
 
 const caret_anim = op => keyframes`
@@ -61,6 +61,7 @@ export const Caret = styled.span`
   margin-bottom: -0.27em;
   margin-left: 3px;
   opacity: 0;
+
   &.hello_caret {
     opacity: 1;
 
@@ -71,6 +72,7 @@ export const Caret = styled.span`
     animation-iteration-count: infinite, 1;
     animation-fill-mode: both, forwards;
   }
+
   &.dev_caret {
     animation-name: ${dev_stay}, ${caret_anim(1)};
     animation-duration: 1.68s, 1.1s;

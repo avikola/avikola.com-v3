@@ -1,5 +1,10 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
+export const white = 'rgba(255, 255, 255, 0.93)'
+export const black = '#141414'
+export const accent = '#E5261C'
+export const svgsize = '24px'
+
 export const Block = styled.div`
   position: relative;
   width: 100%;

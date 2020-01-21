@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
-import { GlobalStyle } from '../utils/css/global'
+import { GlobalStyle, white, black, accent, svgsize } from '../utils/css/global'
 import '../utils/css/fonts.css'
 
 const BodyContainer = styled.div`
@@ -16,9 +16,10 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider
       theme={{
-        white: 'rgba(255, 255, 255, 0.93)',
-        black: '#141414',
-        accent: '#E5261C',
+        white,
+        black,
+        accent,
+        svgsize,
       }}
     >
       <BodyContainer>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Block } from '../utils/css/global'
 import styled, { createGlobalStyle, keyframes } from 'styled-components'
 
-export default class intro extends Component {
+export default class Intro extends Component {
   constructor(props) {
     super(props)
     this.state = { dev_content: '', hello_content: '' }
@@ -37,7 +37,7 @@ export default class intro extends Component {
             })
           }
         }, 80)
-      }, 4950)
+      }, 4850)
     }
   }
 
@@ -103,6 +103,7 @@ const Name = styled.h1`
   white-space: nowrap;
   opacity: 0;
   animation: introduction 2.5s 2.3s ease-out forwards;
+  /*text-shadow: -3px 1px #ff0000, 3px 1px #0000ff;*/
 
   text-align: center;
   span {
@@ -118,6 +119,7 @@ const Dev = styled.h2`
   font-size: 1.5em;
   font-weight: 500;
   letter-spacing: 1px;
+  /*text-shadow: -3px 1px #ff0000, 3px 1px #0000ff;*/
 
   text-align: center;
   align-self: ${props => (props.hello ? 'flex-end' : 'flex-start')};
@@ -149,6 +151,7 @@ const Caret = styled.span`
   margin-bottom: -0.27em;
   margin-left: 3px;
   opacity: 0;
+  /*box-shadow: -3px 1px #ff0000, 3px 1px #0000ff;*/
 
   &.hello_caret {
     opacity: 1;

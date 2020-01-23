@@ -9,7 +9,6 @@
 
 - React
   - Gatsby
-- SASS
 
 ## Set Up & Run
 

@@ -1,5 +1,5 @@
 {
-  "name": "Avishkar Kolahalu",
+  "name": "avikola",
   "private": true,
   "description": "Avishkar Kolahalu // Software Developer",
   "version": "0.1.0",
@@ -11,8 +11,8 @@
     "gatsby-plugin-google-analytics": "^2.1.33",
     "gatsby-plugin-layout": "^1.1.21",
     "gatsby-plugin-manifest": "^2.2.31",
-    "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
+    "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^2.3.5",
     "gatsby-plugin-styled-components": "^3.1.17",
     "gatsby-source-filesystem": "^2.1.40",
@@ -21,6 +21,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-spring": "^8.0.27",
     "styled-components": "^5.0.0"
   },
   "devDependencies": {

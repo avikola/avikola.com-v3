@@ -1,24 +1,32 @@
-import React from "react"
-import PropTypes from "prop-types"
-import styled from "styled-components"
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled, { ThemeProvider } from 'styled-components'
+import { GlobalStyle, white, black, accent, svgsize } from '../utils/css/global'
+import '../utils/css/fonts.css'
 
 const BodyContainer = styled.div`
-  margin: 0 auto;
-  max-width: 960;
-  padding: 2.0875rem;
-  background-color: #3b1f2b;
-`
-
-const TestHead = styled.h1`
-  color: #e5261c;
+  background-color: ${props => props.theme.black};
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 `
 
 const Layout = ({ children }) => {
   return (
-    <BodyContainer>
-      <TestHead>TESTING THIS THING OUT</TestHead>
-      {children}
-    </BodyContainer>
+    <ThemeProvider
+      theme={{
+        white,
+        black,
+        accent,
+        svgsize,
+      }}
+    >
+      <BodyContainer>
+        <GlobalStyle />
+        {children}
+      </BodyContainer>
+    </ThemeProvider>
   )
 }
 

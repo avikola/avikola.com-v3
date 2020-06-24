@@ -1,12 +1,41 @@
 import React from "react"
 
 import SEO from "../utils/seo"
+import { Block } from "../utils/css/global"
+import { Link } from "gatsby"
+import styled, { keyframes } from "styled-components"
 
+const shuffle = keyframes`
+  33%{
+    text-indent: -25px;
+  }
+  66%{
+    text-indent: 25px;
+  }
+  100%
+  {
+    text-indent:0px;
+  }
+`
+const LinkHome = styled.h2`
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  &:hover {
+    animation: ${shuffle} 0.7s linear infinite;
+    color: #d83900;
+  }
+`
+
+// TODO: Animate this page. Liven it up
 const NotFoundPage = () => (
   <>
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Block direction="column">
+      <br />
+      <Link to="/">
+        <LinkHome>GO BACK HOME</LinkHome>
+      </Link>
+    </Block>
   </>
 )
 

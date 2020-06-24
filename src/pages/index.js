@@ -1,12 +1,13 @@
-import React from "react"
-import SEO from "../utils/seo"
-
-import "../utils/css/global.css"
+import React from 'react'
+import SEO from '../utils/seo'
+import Intro from '../components/intro'
+import SocialBar from '../components/SocialBar'
 
 const IndexPage = () => (
   <>
     <SEO title="Software Developer" />
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
+    <Intro />
+    <SocialBar />
   </>
 )
 
